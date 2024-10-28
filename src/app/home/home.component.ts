@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MenuComponent } from '../menu/menu.component';
 import { CategoriesComponent } from '../categories/categories.component';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 interface MenuItem {
   path: string;
@@ -32,6 +32,7 @@ interface MenuItem {
     MenuComponent,
     CategoriesComponent,
     RouterOutlet,
+    RouterModule
   ],
 })
 export class HomeComponent {
