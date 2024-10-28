@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
   {
-    path: '/Angular17DoZero/categories',
+    path: 'categories',
     component: CategoriesComponent,
   },
   {
