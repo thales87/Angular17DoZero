@@ -29,6 +29,12 @@
       </button>
       }
       <span>Sales App</span>
+      <div class="width-full"></div>
+      <button mat-icon-button>
+        <mat-icon [matBadge]="cartService.itensInCart" matBadgeColor="warn">
+          shopping_cart</mat-icon
+        >
+      </button>
     </mat-toolbar>
 
     <div class="m-10">

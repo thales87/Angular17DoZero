@@ -11,6 +11,8 @@ import { map, shareReplay } from 'rxjs/operators';
 import { MenuComponent } from '../menu/menu.component';
 import { CategoriesComponent } from '../categories/categories.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { MatBadgeModule } from '@angular/material/badge';
+import { CartService } from '../cart.service';
 
 interface MenuItem {
   path: string;
@@ -32,7 +34,8 @@ interface MenuItem {
     MenuComponent,
     CategoriesComponent,
     RouterOutlet,
-    RouterModule
+    RouterModule,
+    MatBadgeModule
   ],
 })
 export class HomeComponent {
@@ -52,6 +55,7 @@ export class HomeComponent {
   ];
 
   private breakpointObserver = inject(BreakpointObserver);
+  cartService = inject(CartService);
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
